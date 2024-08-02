@@ -1,5 +1,8 @@
 <template>
-  <NuxtLayout name="custom" class="main cabinet">
+  <NuxtLayout name="default-hero" class="main cabinet" style="background-color: #fff">
+    <div>
+      <AfHeaderColor />
+    </div>
     <section id="favorites">
       <div class="container">
         <h1 class="title-none">Избранное</h1>
@@ -104,6 +107,7 @@
         </div>
       </div>
     </section>
+    <AfCustomFooter :lnkStyle="'footer-block footer-block-transparent'"/>
   </NuxtLayout>
 </template>
 
@@ -115,6 +119,14 @@ const activeTab = ref("vacancies");
 function setActiveTab(tab) {
   activeTab.value = tab;
 }
+
+onMounted(() => {
+  document.body.classList.add('bg-white');
+});
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+  body {
+    background-color: #fff;
+  }
+</style>

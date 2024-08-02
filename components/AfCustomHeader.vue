@@ -1,5 +1,5 @@
 <template>
-  <header class="header">
+  <header class="header asdasd">
     <div class="container">
       <div class="header-block">
         <AfLogo />

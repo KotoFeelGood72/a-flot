@@ -1,7 +1,8 @@
 <template>
-    <NuxtLayout name="custom" background="#fff">
-        <main class="main cabinet">
-
+    <NuxtLayout name="default-hero" class="main cabinet">
+        <div>
+            <AfHeaderColor/>
+        </div>
         <section id="responses">
             <div class="container">
               
@@ -413,13 +414,14 @@
                 </div>
             </div>
         </section>
-
-    </main>
+        <AfCustomFooter :lnkStyle="'footer-block footer-block-transparent'"/>
     </NuxtLayout>
 </template>
 
 <script setup>
-
+    onMounted(() => {
+        document.body.classList.add('bg-white');
+    });
 </script>
 
 <style lang="scss" scoped>

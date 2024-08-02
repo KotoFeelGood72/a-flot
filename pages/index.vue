@@ -1,6 +1,7 @@
 <template>
   <NuxtLayout name="fullscreen">
-    <div id="fullpage">
+    <full-page ref="fullpage" :options="{scrollBar: true, navigation: true, navigationPosition: 'left'}" id="fullpage">
+
       <div class="section section-content-1">
         <div class="main-content main-content-one">
           <div class="main-block-one">
@@ -59,6 +60,8 @@
                   </a>
                 </li>
               </ul>
+              <HomeVacancy v-if="activeTabIndex == 0"/>
+              <HomeResume v-if="activeTabIndex == 1"/>
               <div id="vaksWrap" class="vak-block" v-if="(main && main[0]) || main[1]">
                 <div class="vak-tab" :class="{ 'vak-active': activeTabIndex === 0 }">
                   <div class="vak-part">
@@ -228,7 +231,8 @@
                   </a>
                 </li>
               </ul>
-              <div id="vaksWrap1" class="vak-block">
+              <HomeNews/>
+              <div style="display:none;" id="vaksWrap1" class="vak-block">
                 <div class="vak-tab" :class="{ 'vak-active': activeTabNewsIndex === 0 }">
                   <div class="new-block" v-if="main && main[2]">
                     <Swiper
@@ -260,7 +264,7 @@
                   </div>
                 </div>
               </div>
-              <div id="vaksWrap2" class="vak-block">
+              <div style="display:none;" id="vaksWrap2" class="vak-block">
                 <div class="vak-tab" :class="{ 'vak-active': activeTabNewsIndex === 1 }">
                   <div class="new-block" v-if="main && main[2]">
                     <Swiper
@@ -296,7 +300,9 @@
           </div>
         </div>
       </div>
-    </div>
+
+      <HomeFooter/>
+    </full-page>
     <div class="fixed-dop">
       <img src="assets/img/main/dop.png" alt="image" class="info-dop__img" />
     </div>
@@ -313,6 +319,24 @@ import api from "@/api/api";
 import { Navigation } from "swiper/modules";
 import { useGlobalStore, useGlobalStoreRefs } from "~/store/useGlobalStore";
 
+//ED TODO: remove on backend release
+import HomeVacancy from "~/components/demo_html/HomeVacancy.vue";
+import HomeResume from "~/components/demo_html/HomeResume.vue";
+import HomeFooter from '../components/demo_html/HomeFooter.vue';
+import HomeNews from '../components/demo_html/HomeNews.vue';
+
+// export default {
+//   data () {
+//     return {
+//       options: {
+//         scrollOverflow: true,
+//         scrollBar: true,
+//         menu: '#menu',
+//         navigation: true,
+//       }
+//     }
+//   },
+// }
 const activeTabIndex = ref(0);
 const activeTabNewsIndex = ref(0);
 const main = ref({});
@@ -337,118 +361,6 @@ async function fetchMain() {
   main.value = data;
 }
 
-// Полноэкранная прокрутка
-let inMove = ref(false);
-const offsets = ref([]);
-let touchStartY = ref(0);
-const inMoveDelay = 400;
-
-function calculateSectionOffsets() {
-  let sections = document.getElementsByClassName("section");
-  let length = sections.length;
-
-  for (let i = 0; i < length; i++) {
-    let sectionOffset = sections[i].offsetTop;
-    offsets.value.push(sectionOffset);
-  }
-}
-
-function handleMouseWheel(e) {
-  if (e.wheelDelta < 0 && !inMove.value) {
-    moveUp();
-  } else if (e.wheelDelta > 0 && !inMove.value) {
-    moveDown();
-  }
-
-  e.preventDefault();
-  return false;
-}
-
-function handleMouseWheelDOM(e) {
-  if (e.detail > 0 && !inMove.value) {
-    moveUp();
-  } else if (e.detail < 0 && !inMove.value) {
-    moveDown();
-  }
-
-  return false;
-}
-
-function moveDown() {
-  if (activeSection.value <= 0) return;
-
-  inMove.value = true;
-  activeSection.value--;
-
-  scrollToSection(activeSection.value, true);
-  setActiveSection(activeSection.value);
-}
-
-function moveUp() {
-  if (activeSection.value >= offsets.value.length - 1) return;
-
-  inMove.value = true;
-  activeSection.value++;
-
-  scrollToSection(activeSection.value, true);
-  setActiveSection(activeSection.value);
-}
-
-function scrollToSection(id, force = false) {
-  if (inMove.value && !force) return false;
-
-  activeSection.value = id;
-  inMove.value = true;
-
-  let section = document.getElementsByClassName("section")[id];
-  if (section) {
-    section.scrollIntoView({ behavior: "smooth" });
-  }
-
-  setTimeout(() => {
-    inMove.value = false;
-  }, inMoveDelay);
-}
-
-function touchStart(e) {
-  e.preventDefault();
-  touchStartY.value = e.touches[0].clientY;
-}
-
-function touchMove(e) {
-  if (inMove.value) return false;
-  e.preventDefault();
-
-  const currentY = e.touches[0].clientY;
-
-  if (touchStartY.value < currentY) {
-    moveDown();
-  } else {
-    moveUp();
-  }
-
-  touchStartY.value = 0;
-  return false;
-}
-
-onMounted(() => {
-  fetchMain();
-  calculateSectionOffsets();
-
-  window.addEventListener("DOMMouseScroll", handleMouseWheelDOM);
-  window.addEventListener("mousewheel", handleMouseWheel, { passive: false });
-
-  window.addEventListener("touchstart", touchStart, { passive: false });
-  window.addEventListener("touchmove", touchMove, { passive: false });
-});
-
-onBeforeUnmount(() => {
-  window.removeEventListener("DOMMouseScroll", handleMouseWheelDOM);
-  window.removeEventListener("mousewheel", handleMouseWheel, { passive: false });
-
-  window.removeEventListener("touchstart", touchStart);
-  window.removeEventListener("touchmove", touchMove);
-});
 </script>
 
 <style lang="scss" scoped>
@@ -471,13 +383,13 @@ body {
   align-items: center;
   transition: transform 1s ease-in-out;
 }
-
+/*
 .fixed-dop {
   position: fixed;
   bottom: 0;
   right: 0;
 }
-
+*/
 .section-content-1 {
   display: flex;
   align-items: center;
@@ -487,5 +399,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.section-content-5 {
+  justify-content: flex-end;
 }
 </style>

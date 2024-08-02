@@ -9,6 +9,7 @@
 <script setup>
 import AfCustomHeader from "../components/AfCustomHeader.vue";
 import AfCustomFooter from "../components/AfCustomFooter.vue";
+import AfNav from "../components/AfNav.vue";
 
 const props = defineProps({
   footer: {
@@ -17,9 +18,3 @@ const props = defineProps({
   },
 });
 </script>
-
-<style lang="scss">
-body {
-  background-color: #eaecf7;
-}
-</style>

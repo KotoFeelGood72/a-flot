@@ -2,9 +2,8 @@
 import axios from 'axios';
 import { useUsersStoreRefs } from '~/store/useUserStore';
 
-
 const instance = axios.create({
-  baseURL: 'http://93.183.94.12:8000/api/v1',
+  baseURL: 'https://xn--80awjqh.xn--p1ai/api/v1',
   headers: {
     'Content-Type': 'application/json'
   }

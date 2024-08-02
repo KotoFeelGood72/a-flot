@@ -1,7 +1,8 @@
 <template>
-    <NuxtLayout name="custom">
-        <main class="cabinet">
-
+    <NuxtLayout name="default-hero" class="cabinet">
+        <div>
+            <AfHeaderColor/>
+        </div>
         <section id="responses">
             <div class="container">
               
@@ -29,12 +30,12 @@
                           <!-- /.flot-item__top -->
                           <div class="flot-item__middle">
                           <div class="vacancy__meta">
-                            <div class="vacancy__company"><img src="../img/responses/company.png" alt="">OJ Crew</div>
-                            <div class="vacancy__ship"><img src="../img/responses/ship.png" alt="">Победа
+                            <div class="vacancy__company"><img src="assets/img/responses/company.png" alt="">OJ Crew</div>
+                            <div class="vacancy__ship"><img src="assets/img/responses/ship.png" alt="">Победа
                             </div>
                         </div>
                         <a href="#" class="flot-item__logo">
-                            <img  src="../img/flot/logo-cart.png" alt="image">
+                            <img  src="assets/img/flot/logo-cart.png" alt="image">
                           </a>
                           <!-- /.flot-item__logo -->
                          </div>
@@ -82,12 +83,12 @@
                             <!-- /.flot-item__top -->
                             <div class="flot-item__middle">
                             <div class="vacancy__meta">
-                              <div class="vacancy__company"><img src="../img/responses/company.png" alt="">OJ Crew</div>
-                              <div class="vacancy__ship"><img src="../img/responses/ship.png" alt="">Победа
+                              <div class="vacancy__company"><img src="assets/img/responses/company.png" alt="">OJ Crew</div>
+                              <div class="vacancy__ship"><img src="assets/img/responses/ship.png" alt="">Победа
                               </div>
                           </div>
                           <a href="#" class="flot-item__logo">
-                              <img  src="../img/flot/logo-cart.png" alt="image">
+                              <img  src="assets/img/flot/logo-cart.png" alt="image">
                             </a>
                             <!-- /.flot-item__logo -->
                            </div>
@@ -132,7 +133,7 @@
                             <div class="vacancy__date new vacancy-dateoff">
                                 <div class="vacancy-dateoff-text">Ваша вакансия</div>
                             <div class="vacancy-off-date vacancy-off-act">
-                                <img src="../img/dop-page/act-ace.svg" alt="image">
+                                <img src="assets/img/dop-page/act-ace.svg" alt="image">
                                 18200
                             </div>
                             <!-- /.vacancy-off-date -->
@@ -145,12 +146,12 @@
                             <!-- /.flot-item__top -->
                             <div class="flot-item__middle">
                             <div class="vacancy__meta">
-                              <div class="vacancy__company"><img src="../img/responses/company.png" alt="">OJ Crew</div>
-                              <div class="vacancy__ship"><img src="../img/responses/ship.png" alt="">Победа
+                              <div class="vacancy__company"><img src="assets/img/responses/company.png" alt="">OJ Crew</div>
+                              <div class="vacancy__ship"><img src="assets/img/responses/ship.png" alt="">Победа
                               </div>
                           </div>
                           <a href="#" class="flot-item__logo">
-                              <img  src="../img/flot/logo-cart.png" alt="image">
+                              <img  src="assets/img/flot/logo-cart.png" alt="image">
                             </a>
                             <!-- /.flot-item__logo -->
                            </div>
@@ -199,12 +200,12 @@
                             <!-- /.flot-item__top -->
                             <div class="flot-item__middle">
                             <div class="vacancy__meta">
-                              <div class="vacancy__company"><img src="../img/responses/company.png" alt="">OJ Crew</div>
-                              <div class="vacancy__ship"><img src="../img/responses/ship.png" alt="">Победа
+                              <div class="vacancy__company"><img src="assets/img/responses/company.png" alt="">OJ Crew</div>
+                              <div class="vacancy__ship"><img src="assets/img/responses/ship.png" alt="">Победа
                               </div>
                           </div>
                           <a href="#" class="flot-item__logo">
-                              <img  src="../img/flot/logo-cart.png" alt="image">
+                              <img  src="assets/img/flot/logo-cart.png" alt="image">
                             </a>
                             <!-- /.flot-item__logo -->
                            </div>
@@ -254,12 +255,12 @@
                             <!-- /.flot-item__top -->
                             <div class="flot-item__middle">
                             <div class="vacancy__meta">
-                              <div class="vacancy__company"><img src="../img/responses/company.png" alt="">OJ Crew</div>
-                              <div class="vacancy__ship"><img src="../img/responses/ship.png" alt="">Победа
+                              <div class="vacancy__company"><img src="assets/img/responses/company.png" alt="">OJ Crew</div>
+                              <div class="vacancy__ship"><img src="assets/img/responses/ship.png" alt="">Победа
                               </div>
                           </div>
                           <a href="#" class="flot-item__logo">
-                              <img  src="../img/flot/logo-cart.png" alt="image">
+                              <img  src="assets/img/flot/logo-cart.png" alt="image">
                             </a>
                             <!-- /.flot-item__logo -->
                            </div>
@@ -309,12 +310,12 @@
                             <!-- /.flot-item__top -->
                             <div class="flot-item__middle">
                             <div class="vacancy__meta">
-                              <div class="vacancy__company"><img src="../img/responses/company.png" alt="">OJ Crew</div>
-                              <div class="vacancy__ship"><img src="../img/responses/ship.png" alt="">Победа
+                              <div class="vacancy__company"><img src="assets/img/responses/company.png" alt="">OJ Crew</div>
+                              <div class="vacancy__ship"><img src="assets/img/responses/ship.png" alt="">Победа
                               </div>
                           </div>
                           <a href="#" class="flot-item__logo">
-                              <img  src="../img/flot/logo-cart.png" alt="image">
+                              <img  src="assets/img/flot/logo-cart.png" alt="image">
                             </a>
                             <!-- /.flot-item__logo -->
                            </div>
@@ -364,12 +365,12 @@
                             <!-- /.flot-item__top -->
                             <div class="flot-item__middle">
                             <div class="vacancy__meta">
-                              <div class="vacancy__company"><img src="../img/responses/company.png" alt="">OJ Crew</div>
-                              <div class="vacancy__ship"><img src="../img/responses/ship.png" alt="">Победа
+                              <div class="vacancy__company"><img src="assets/img/responses/company.png" alt="">OJ Crew</div>
+                              <div class="vacancy__ship"><img src="assets/img/responses/ship.png" alt="">Победа
                               </div>
                           </div>
                           <a href="#" class="flot-item__logo">
-                              <img  src="../img/flot/logo-cart.png" alt="image">
+                              <img  src="assets/img/flot/logo-cart.png" alt="image">
                             </a>
                             <!-- /.flot-item__logo -->
                            </div>
@@ -419,12 +420,12 @@
                             <!-- /.flot-item__top -->
                             <div class="flot-item__middle">
                             <div class="vacancy__meta">
-                              <div class="vacancy__company"><img src="../img/responses/company.png" alt="">OJ Crew</div>
-                              <div class="vacancy__ship"><img src="../img/responses/ship.png" alt="">Победа
+                              <div class="vacancy__company"><img src="assets/img/responses/company.png" alt="">OJ Crew</div>
+                              <div class="vacancy__ship"><img src="assets/img/responses/ship.png" alt="">Победа
                               </div>
                           </div>
                           <a href="#" class="flot-item__logo">
-                              <img  src="../img/flot/logo-cart.png" alt="image">
+                              <img  src="assets/img/flot/logo-cart.png" alt="image">
                             </a>
                             <!-- /.flot-item__logo -->
                            </div>
@@ -474,12 +475,12 @@
                             <!-- /.flot-item__top -->
                             <div class="flot-item__middle">
                             <div class="vacancy__meta">
-                              <div class="vacancy__company"><img src="../img/responses/company.png" alt="">OJ Crew</div>
-                              <div class="vacancy__ship"><img src="../img/responses/ship.png" alt="">Победа
+                              <div class="vacancy__company"><img src="assets/img/responses/company.png" alt="">OJ Crew</div>
+                              <div class="vacancy__ship"><img src="assets/img/responses/ship.png" alt="">Победа
                               </div>
                           </div>
                           <a href="#" class="flot-item__logo">
-                              <img  src="../img/flot/logo-cart.png" alt="image">
+                              <img  src="assets/img/flot/logo-cart.png" alt="image">
                             </a>
                             <!-- /.flot-item__logo -->
                            </div>
@@ -547,11 +548,11 @@
                         <!-- /.act-info-content -->
                         <div class="act-arrow">
                             <div class="act-arr act-arrow-top">
-                                <img src="../img/dop-page/act-top.svg" alt="image"></div>
+                                <img src="assets/img/dop-page/act-top.svg" alt="image"></div>
                             <!-- /.act-arrow-top -->
                             <div class="act-line"></div>
                             <div class="act-arr act-arrow-bottom">
-                                <img src="../img/dop-page/act-bottom.svg" alt="image"></div>
+                                <img src="assets/img/dop-page/act-bottom.svg" alt="image"></div>
                             <!-- /.act-arrow-top -->
                         </div>
                         <!-- /.act-arrow -->
@@ -568,7 +569,7 @@
                         </div>
                         <!-- /.act-content-item -->
                         <div class="act-content-item">
-                            <div class="act-content-price"><span>80 ₽</span></div>
+                            <div class="act-content-price"><span>100 ₽</span></div>
                             <!-- /.act-content-price -->
                             <div class="act-content-title">мин. цена за прикл-е</div>
                             <!-- /.act-content-title -->
@@ -597,8 +598,7 @@
              
             </div>
         </section>
-
-    </main>
+        <AfCustomFooter :footerStyle="'footer-margin-top'"/>
     </NuxtLayout>
 </template>
 

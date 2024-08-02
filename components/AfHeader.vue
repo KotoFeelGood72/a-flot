@@ -7,6 +7,7 @@
         <div class="header-content">
           <a for="header-search" class="header-search">
             <span class="fa fa-search header-search__icon"></span>
+            <FontAwesomeIcon :icon="faSearch" />
             <div class="header-search__text">Поиск</div>
           </a>
 
@@ -21,7 +22,7 @@
           </div>
 
           <div class="header-menu" id="menu">
-            <div class="header-close">
+            <div class="header-close" @click="toggleModal('menu')">
               <span class="header-close__icon"></span>
               <div class="header-close__text">закрыть</div>
             </div>

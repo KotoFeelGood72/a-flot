@@ -1,6 +1,6 @@
 <template>
   <div id="menu-reg" :class="['menu-reg menu-none', { 'menu-show': isOpen }]">
-    <div class="header-close menu-close-gray menu-close-reg">
+    <div class="header-close menu-close-gray menu-close-reg" @click="toggleModalLk">
       <span class="header-close__icon"></span>
       <div class="header-close__text" @click="closeModal('lk')">закрыть</div>
     </div>

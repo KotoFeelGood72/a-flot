@@ -60,7 +60,7 @@
               <div class="tag-input__item">
                 EVER GIVEN IMO 9811000
                 <button class="tag-input__delete">
-                  <img src="../img/resume/close.svg" alt="delete" />
+                  <img src="assets/img/resume/close.svg" alt="delete" />
                 </button>
               </div>
             </h2>

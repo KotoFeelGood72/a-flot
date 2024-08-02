@@ -9,6 +9,11 @@ export const useModalStore = defineStore('global/modal', {
       seilor: false,
       authCompany: false,
       authSeilor: false,
+      existingship: false,
+      newship: false,
+      shipinfo: false,
+      errorReporting: false,
+      modalResponse: false
     },
   }),
   actions: {

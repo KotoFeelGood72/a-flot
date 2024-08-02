@@ -7,6 +7,11 @@ import ModalRegSeilor from "./components/global/ModalRegSeilor.vue";
 import ModalRegCompany from "./components/global/ModalRegCompany.vue";
 import MenuAccountCompany from "./components/global/MenuAccountCompany.vue";
 import MenuAccountSeilor from "./components/global/MenuAccountSeilor.vue";
+import ModalAddExistingShip from "./components/global/ModalAddExistingShip.vue";
+import ModalAddNewShip from "./components/global/ModalAddNewShip.vue";
+import ModalShipInfo from "./components/global/ModalShipInfo.vue";
+import ModalErrorReporting from "./components/global/ModalErrorReporting.vue";
+import ModalResponse from "./components/global/ModalResponse.vue";
 
 const route = useRoute();
 const { modals } = useModalStoreRefs();
@@ -24,7 +29,12 @@ watch(route, () => {
   <ModalRegSeilor v-show="modals.seilor" :is-open="modals.seilor" />
   <ModalRegCompany v-show="modals.company" :is-open="modals.company" />
   <MenuAccountCompany v-show="modals.authCompany" :is-open="modals.authCompany" />
-  <MenuAccountSeilor v-show="modals.authSeilor" :is-open="modals.authSeilor" />
+  <ModalAddExistingShip v-show="modals.existingship" :is-open="modals.existingship" />
+  <ModalAddNewShip v-show="modals.newship" :is-open="modals.newship" />
+  <ModalShipInfo v-show="modals.shipinfo" :is-open="modals.shipinfo" />
+  <ModalErrorReporting v-show="modals.errorReporting" :is-open="modals.errorReporting" />
+  <ModalResponse v-show="modals.modalResponse" :is-open="modals.modalResponse" />
+
 </template>
 
 <style lang="scss" scoped>

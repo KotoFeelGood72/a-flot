@@ -1,117 +1,96 @@
 <template>
-<NuxtLayout class="section-hero-dock">
-    <div class="hero hero-dock">
-      <div class="container">
-        <div class="hero-block hero-block-dock">
-          <h1 class="hero-title hero-title-dock">
-            Морские документы
-          </h1>
-          <!-- /.hero-title -->
-
-          <div class="hero-text">
-            Пример краткого текста о наших партнерах.
-          </div>
-          <!-- /.hero-text -->
+    <NuxtLayout class="section-hero-dock" name="default-hero">
+        <div class="section-hero">
+            <AfCustomHeader/>
+            <div class="hero hero-dock">
+                <div class="container">
+                    <div class="hero-block hero-block-dock">
+                        <h1 class="hero-title hero-title-dock">
+                            Морские документы
+                        </h1>
+                    </div>
+                </div>
+            </div>
         </div>
-        <!-- /.hero-block -->
-      </div>
-      <!-- /.container -->
-    </div>
-    <!-- /.hero -->
+        <section class="section-dock">
+            <div class="container">
+                <div class="dock">
+                    <!-- ED TODO: remove on backend release -->
+                    <a href="/single-dock-1" class="dock-item">
+                        <img src="assets/img/dock/image-4.jpg" alt="image" class="dock-img">
+                        <div class="dock-content">
+                            <div class="dock-part">
+                                <div class="dock-info">
+                                    <div class="dock-subtitle">Морские документы</div>
+                                    <!-- /.dock-subtitle -->
 
+                                </div>
+                                <!-- /.dock-info -->
 
-  <main>
-   <section class="section-dock">
-    <div class="container">
-        <div class="dock">
-            <a href="#" class="dock-item">
-                <img src="assets/img/dock/image-1.png" alt="image" class="dock-img">
-                <div class="dock-content">
-                    <div class="dock-part">
-                    <div class="dock-info">
-                        <div class="dock-subtitle">Пример длинного
-названия документа</div>
-                        <!-- /.dock-subtitle -->
-                        <div class="dock-text">Компания: Пример длинного названия компании</div>
-                        <!-- /.dock-text -->
-                    </div>
-                    <!-- /.dock-info -->
-                    <div class="dock-button">→</div>
-                    <!-- /.dock-button -->
+                            </div>
+                            <!-- /.dock-part -->
+                        </div>
+                        <!-- /.dock-content -->
+                    </a>
+                    <!-- /.dock-item -->
+                    <a href="/single-dock-2" class="dock-item">
+                        <img src="assets/img/dock/image-2.jpg" alt="image" class="dock-img">
+                        <div class="dock-content">
+                            <div class="dock-part">
+                                <div class="dock-info">
+                                    <div class="dock-subtitle">Медицинская комиссия</div>
+                                    <!-- /.dock-subtitle -->
+
+                                </div>
+                                <!-- /.dock-info -->
+
+                            </div>
+                            <!-- /.dock-part -->
+                        </div>
+                        <!-- /.dock-content -->
+                    </a>
+                    <!-- /.dock-item -->
+                    <a href="/single-dock-3" class="dock-item">
+                        <img src="assets/img/dock/image-1.jpg" alt="image" class="dock-img">
+                        <div class="dock-content">
+                            <div class="dock-part">
+                                <div class="dock-info">
+                                    <div class="dock-subtitle">УЛМ и Мореходная книжка
+                                    </div>
+                                    <!-- /.dock-subtitle -->
+
+                                </div>
+                                <!-- /.dock-info -->
+
+                            </div>
+                            <!-- /.dock-part -->
+                        </div>
+                        <!-- /.dock-content -->
+                    </a>
+                    <!-- /.dock-item -->
+                    <a href="/single-dock-4" class="dock-item">
+                        <img src="assets/img/dock/image-3.png" alt="image" class="dock-img">
+                        <div class="dock-content">
+                            <div class="dock-part">
+                                <div class="dock-info">
+                                    <div class="dock-subtitle">Охрана труда</div>
+                                    <!-- /.dock-subtitle -->
+
+                                </div>
+                                <!-- /.dock-info -->
+
+                            </div>
+                            <!-- /.dock-part -->
+                        </div>
+                        <!-- /.dock-content -->
+                    </a>
+                    <!-- /.dock-item -->
                 </div>
-                <!-- /.dock-part -->
-                </div>
-                <!-- /.dock-content -->
-            </a>
-            <!-- /.dock-item -->
-            <a href="#" class="dock-item">
-                <img src="assets/img/dock/image-2.png" alt="image" class="dock-img">
-                <div class="dock-content">
-                    <div class="dock-part">
-                    <div class="dock-info">
-                        <div class="dock-subtitle">Пример длинного
-названия документа</div>
-                        <!-- /.dock-subtitle -->
-                        <div class="dock-text">Компания: Пример длинного названия компании</div>
-                        <!-- /.dock-text -->
-                    </div>
-                    <!-- /.dock-info -->
-                    <div class="dock-button">→</div>
-                    <!-- /.dock-button -->
-                </div>
-                <!-- /.dock-part -->
-                </div>
-                <!-- /.dock-content -->
-            </a>
-            <!-- /.dock-item -->
-            <a href="#" class="dock-item">
-                <img src="assets/img/dock/image-1.png" alt="image" class="dock-img">
-                <div class="dock-content">
-                    <div class="dock-part">
-                    <div class="dock-info">
-                        <div class="dock-subtitle">Пример длинного
-названия документа</div>
-                        <!-- /.dock-subtitle -->
-                        <div class="dock-text">Компания: Пример длинного названия компании</div>
-                        <!-- /.dock-text -->
-                    </div>
-                    <!-- /.dock-info -->
-                    <div class="dock-button">→</div>
-                    <!-- /.dock-button -->
-                </div>
-                <!-- /.dock-part -->
-                </div>
-                <!-- /.dock-content -->
-            </a>
-            <!-- /.dock-item -->
-            <a href="#" class="dock-item">
-                <img src="assets/img/dock/image-2.png" alt="image" class="dock-img">
-                <div class="dock-content">
-                    <div class="dock-part">
-                    <div class="dock-info">
-                        <div class="dock-subtitle">Пример длинного
-названия документа</div>
-                        <!-- /.dock-subtitle -->
-                        <div class="dock-text">Компания: Пример длинного названия компании</div>
-                        <!-- /.dock-text -->
-                    </div>
-                    <!-- /.dock-info -->
-                    <div class="dock-button">→</div>
-                    <!-- /.dock-button -->
-                </div>
-                <!-- /.dock-part -->
-                </div>
-                <!-- /.dock-content -->
-            </a>
-            <!-- /.dock-item -->
-        </div>
-        <!-- /.dock -->
-    </div>
-    <!-- /.container -->
-   </section>
-   <!-- /.section-dock -->
-  </main>
-</NuxtLayout>
+                <!-- /.dock -->
+            </div>
+            <!-- /.container -->
+        </section>
+    </NuxtLayout>
 </template>
 
 <script setup>
