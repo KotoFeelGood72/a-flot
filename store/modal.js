@@ -13,7 +13,8 @@ export const useModalStore = defineStore('global/modal', {
       newship: false,
       shipinfo: false,
       errorReporting: false,
-      modalResponse: false
+      modalResponse: false,
+      modalSeilorRegLogin: false
     },
   }),
   actions: {

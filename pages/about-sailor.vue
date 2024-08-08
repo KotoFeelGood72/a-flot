@@ -12,7 +12,7 @@
                         <div class="vabout-pag">
                             <a href="/" class="vabout-pag-link">Главная</a>
                             <!-- /.vabout-pag-link -->
-                            <a href="/resumes" class="vabout-pag-link">Анкеты моряков</a>
+                            <a href="/vacancies" class="vabout-pag-link">Вакансии</a>
                             <!-- /.vabout-pag-link -->
                             <a class="vabout-pag-link">Штребец Николай Владимирович</a>
                             <!-- /.vabout-pag-link -->

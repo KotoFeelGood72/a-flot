@@ -7,7 +7,6 @@
         <div class="header-content">
           <a for="header-search" class="header-search">
             <span class="fa fa-search header-search__icon"></span>
-            <FontAwesomeIcon :icon="faSearch" />
             <div class="header-search__text">Поиск</div>
           </a>
 

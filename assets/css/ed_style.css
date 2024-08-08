@@ -77,6 +77,16 @@ body.bg-white {
 }
 .modal-block {
     width: calc(100% - 80px);
+    padding-bottom: 20px;
+}
+.suda-item__text {
+    padding-bottom: 10px;
+}
+#dd-new-ship .suda-item__text {
+    padding-bottom: 0px;
+}
+#add-existing-ship.menu-reg .tag-input__item {
+    padding: 10px 15px;
 }
 #modal-response.menu-show {
     width: auto;
@@ -87,4 +97,18 @@ body.bg-white {
     justify-content: center;
     text-align: center;
     grid-gap: 30px;
+}
+
+.fp-viewing-2 #fp-nav ul li a.active span, .fp-viewing-2 #fp-nav ul li:hover a.active span, .fp-viewing-2 .fp-slidesNav ul li a.active span, .fp-viewing-2 .fp-slidesNav ul li:hover a.active span {
+    background: #9c291b !important;
+}
+.header-overlay {
+    background-image: none;
+    background-color: rgba(77, 81, 114, 0.5);
+}
+#responses .vi-item:last-child {
+    grid-column: 0 span;
+}
+#scroll_top {
+    display: none;
 }

@@ -1,6 +1,6 @@
 <template>
-    <NuxtLayout class="section-hero-dock" name="default-hero">
-        <div class="section-hero">
+    <NuxtLayout  name="default-hero">
+        <div class="section-hero section-hero-dock">
             <AfCustomHeader/>
             <div class="hero hero-dock">
                 <div class="container">
@@ -90,6 +90,7 @@
             </div>
             <!-- /.container -->
         </section>
+        <AfCustomFooter/>
     </NuxtLayout>
 </template>
 

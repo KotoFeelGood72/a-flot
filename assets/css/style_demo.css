@@ -7727,7 +7727,7 @@ input {
 .menu-reg .tag-input__item {
     padding: 5px 15px;
 }
-.menu-reg .tag-input__add {
+#reg-sailor .tag-input__add {
     padding: 5px 10px;
 }
 .menu-reg .input input {

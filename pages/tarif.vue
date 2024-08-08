@@ -10,7 +10,7 @@
                         <!-- /.about-title -->
 
                         <ul class="tarif-list" id="tabNav">
-                            <li><a @click="sm=true,sc=false" id="#tab1" :class="{ tactive: sm }">Моряки</a></li>
+                            <li><a @click="sm=true,sc=false" id="#tab1" :class="{ tactive: sm }">Моряк</a></li>
                             <li><a @click="sm=false,sc=true" id="#tab2" :class="{ tactive: sc }">Компании</a></li>
 
                         </ul>

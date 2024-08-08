@@ -12,6 +12,7 @@ import ModalAddNewShip from "./components/global/ModalAddNewShip.vue";
 import ModalShipInfo from "./components/global/ModalShipInfo.vue";
 import ModalErrorReporting from "./components/global/ModalErrorReporting.vue";
 import ModalResponse from "./components/global/ModalResponse.vue";
+import ModalSeilorRegLogin from "./components/global/ModalSailorRegLogin.vue";
 
 const route = useRoute();
 const { modals } = useModalStoreRefs();
@@ -34,6 +35,7 @@ watch(route, () => {
   <ModalShipInfo v-show="modals.shipinfo" :is-open="modals.shipinfo" />
   <ModalErrorReporting v-show="modals.errorReporting" :is-open="modals.errorReporting" />
   <ModalResponse v-show="modals.modalResponse" :is-open="modals.modalResponse" />
+  <ModalSeilorRegLogin v-show="modals.modalSeilorRegLogin" :is-open="modals.modalSeilorRegLogin" />
 
 </template>
 

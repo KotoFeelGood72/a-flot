@@ -7,30 +7,18 @@
       <div class="container">
         <div class="tabs">
           <div class="tab-header">
-            <div
-                    class="tab-label"
-                    :class="{ active: activeTab === 0 }"
-                    @click="changeTab(0)"
-            >
+            <div class="tab-label" @click="tab1=true,tab2=false,tab3=false" :class="{ active: tab1 }">
               Вакансии
             </div>
-            <div
-                    class="tab-label"
-                    :class="{ active: activeTab === 1 }"
-                    @click="changeTab(1)"
-            >
+            <div class="tab-label" @click="tab1=false,tab2=true,tab3=false" :class="{ active: tab2 }">
               Черновики
             </div>
-            <div
-                    class="tab-label"
-                    :class="{ active: activeTab === 2 }"
-                    @click="changeTab(2)"
-            >
+            <div class="tab-label" @click="tab1=false,tab2=false,tab3=true" :class="{ active: tab3 }">>
               Неактуальные вакансии
             </div>
           </div>
 
-          <div class="tab-body" v-if="activeTab === 0">
+          <div class="tab-body" v-if="tab1">
             <div class="flex-title">
               <h1>Действующие вакансии:</h1>
               <div>3 вакансии</div>
@@ -291,7 +279,7 @@
 
             </div>
           </div>
-          <div class="tab-body" v-if="activeTab === 1">
+          <div class="tab-body" v-if="tab2">
             <div class="flex-title">
               <h1>Черновики:</h1>
               <div>2 вакансии</div>
@@ -455,7 +443,7 @@
               </div>
             </div>
           </div>
-          <div class="tab-body" v-if="activeTab === 2">
+          <div class="tab-body" v-if="tab3">
             <div class="flex-title">
               <h1>Неактуальные:</h1>
               <div>2 вакансии</div>
@@ -568,7 +556,6 @@
             </div>
           </div>
 
-
         </div>
       </div>
     </section>
@@ -576,50 +563,58 @@
   </NuxtLayout>
 </template>
 
-<script setup>
-import { useRouter } from "vue-router";
-import { useCompanyStore } from "~/store/useCompanyStore";
-import VacancyItem from "~/components/list/VacancyItem";
-import { ref, onMounted, watch } from "vue";
-
-const router = useRouter();
-const { getVacansies } = useCompanyStore();
-
-const activeTab = ref(0);
-const tabContents = ref([
-  { title: "Действующие вакансии", count: 0, vacancies: [] },
-  { title: "Черновики", count: 0, vacancies: [] },
-  { title: "Неактуальные", count: 0, vacancies: [] },
-]);
-
-const changeTab = (index) => {
-  activeTab.value = index;
-  router.push({ query: { tab: index } });
-};
-
-onMounted(async () => {
-  // await getVacansies();
-
-  const initialTab = Number(router.currentRoute.value.query.tab);
-  if (!isNaN(initialTab) && initialTab >= 0 && initialTab < tabContents.value.length) {
-    activeTab.value = initialTab;
-  }
-
-  tabContents.value.forEach((tab, index) => {
-    tab.count = 0;
-  });
-
-  document.body.classList.add('bg-white');
-});
-
-watch(
-  () => router.currentRoute.value.query.tab,
-  (newTab, oldTab) => {
-    if (newTab !== undefined) {
-      activeTab.value = parseInt(newTab);
+<script>
+// import { useRouter } from "vue-router";
+// import { useCompanyStore } from "~/store/useCompanyStore";
+// import VacancyItem from "~/components/list/VacancyItem";
+// import { ref, onMounted, watch } from "vue";
+//
+// const router = useRouter();
+// const { getVacansies } = useCompanyStore();
+//
+// const activeTab = ref(0);
+// const tabContents = ref([
+//   { title: "Действующие вакансии", count: 0, vacancies: [] },
+//   { title: "Черновики", count: 0, vacancies: [] },
+//   { title: "Неактуальные", count: 0, vacancies: [] },
+// ]);
+// let tab1 = true;
+// let tab2 = false;
+// let tab3 = false;
+//
+//
+// onMounted(async () => {
+//   // await getVacansies();
+//
+//   const initialTab = Number(router.currentRoute.value.query.tab);
+//   if (!isNaN(initialTab) && initialTab >= 0 && initialTab < tabContents.value.length) {
+//     activeTab.value = initialTab;
+//   }
+//
+//   tabContents.value.forEach((tab, index) => {
+//     tab.count = 0;
+//   });
+//
+//   document.body.classList.add('bg-white');
+// });
+//
+// watch(
+//   () => router.currentRoute.value.query.tab,
+//   (newTab, oldTab) => {
+//     if (newTab !== undefined) {
+//       activeTab.value = parseInt(newTab);
+//     }
+//   }
+// );
+  export default {
+    data() {
+      return {
+        tab1: true,
+        tab2: false,
+        tab3: false,
+      }
     }
   }
-);
 </script>
 
 <style lang="scss" scoped></style>

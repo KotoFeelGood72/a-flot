@@ -1,97 +1,159 @@
 <template>
-  <div
-    class="menu-reg menu-none menu-reg-sailor cabinet"
-    id="reg-about"
-    :class="{ 'menu-show': isOpen }"
-  >
+  <div :class="{ 'menu-show': isOpen }" class="menu-reg menu-none menu-reg-sailor cabinet" id="reg-about">
     <AfCloseModal modalName="company" />
+
     <div class="menu-reg-title">Регистрация компании</div>
+    <!-- /.menu-reg-title -->
+
     <div class="reg-about-top">
       <a href="#" class="reg-about-link">
-        <AfInputUpload v-model="formData.companyAvatar" />
-      </a>
+        <img src="assets/img/menu/logo-about.png" alt="image"></a>
+      <!-- /.reg-about-link -->
+
       <div class="reg-about-inputs">
         <div class="reg-about-intop">
-          <AfInput
-            place="Название компании"
-            label="Название компании"
-            id="company_input"
-            v-model="formData.companyName"
-          />
-          <AfInput
-            place="ИНН компании"
-            label="ИНН компании"
-            id="inn_input"
-            v-model="formData.companyInn"
-          />
-          <AfInput
-            place="Адрес компании"
-            label="Россия, Владивосток"
-            id="address_input"
-            v-model="formData.companyAddress"
-          />
+          <div class="input">
+            <label for="">Название компании</label>
+            <input type="text" placeholder="Название компании">
+          </div>
+
+          <div class="input">
+            <label for="">ИНН компании</label>
+            <input type="text" placeholder="ИНН">
+          </div>
+
+          <div class="input">
+            <label for="">Адрес компании</label>
+            <input type="text" placeholder="Россия, Владивосток">
+          </div>
+
+        </div>
+        <!-- /.reg-about-intop -->
+
+      </div>
+      <!-- /.reg-about-inputs -->
+    </div>
+    <!-- /.reg-about-top -->
+
+    <div class="reg-about-subtitle">
+      Контактная информация:
+    </div>
+    <!-- /.reg-about-subtitle -->
+
+    <div class="resume-grid cabinet">
+      <div class="input">
+        <label for="">Email</label>
+        <input type="email" placeholder="Почта">
+
+        <div class="resume-contact__second">
+          <label class="custom-checkbox">
+            <input type="checkbox" checked="">
+            <span class="checkmark"></span>
+            Получать <a href="#">уведомления</a>
+            <br> на указанную почту
+          </label>
         </div>
       </div>
-    </div>
-    <div class="reg-about-subtitle">Контактная информация:</div>
-    <div class="resume-grid cabinet">
-      <AfInput
-        place="Почта"
-        label="Email"
-        type="email"
-        id="email_input"
-        v-model="formData.companyEmail"
-        :showCheckbox="true"
-        v-model:checkboxValue="formData.companyEmailAgree"
-      />
-      <AfInput
-        place="Телефон"
-        label="Номер телефона"
-        type="tel"
-        id="phone_input"
-        v-model="formData.companyPhone"
-        :showCheckbox="true"
-        v-model:checkboxValue="formData.companyPhoneAgree"
-      />
-      <AfInput
-        place="Ник в telegram"
-        label="Ник в telegram"
-        type="email"
-        id="telegram_input"
-        v-model="formData.companyTelegram"
-        :showCheckbox="true"
-        v-model:checkboxValue="formData.companyTelegramAgree"
-      />
-      <AfInput
-        place="Иванов"
-        label="Фамилия"
-        id="family_input"
-        v-model="formData.companyFamily"
-      />
-      <AfInput place="Иван" label="Имя" id="name_input" v-model="formData.companyName" />
-      <AfInput
-        place="Иванович"
-        label="Отчество"
-        id="lastname_input"
-        v-model="formData.companyLastname"
-      />
+
+      <div class="input">
+        <label for="">Номер телефона</label>
+        <input type="tel" placeholder="Телефон">
+
+
+        <div class="resume-contact__second">
+          <label class="custom-checkbox">
+            <input type="checkbox" checked="">
+            <span class="checkmark"></span>
+            Получать <a href="#">уведомления</a>
+            <br> на указанный телефон
+          </label>
+        </div>
+      </div>
+
+      <div class="input">
+        <label for="">Ник в telegram</label>
+        <input type="text" placeholder="Ник в telegram">
+        <div class="resume-contact__second">
+          <label class="custom-checkbox">
+            <input type="checkbox" checked="">
+            <span class="checkmark"></span>
+            Получать <a href="#">уведомления</a>
+            <br> на указанный telegram
+          </label>
+        </div>
+      </div>
+      <div class="input">
+        <label for="">Фамилия</label>
+        <input type="text" placeholder="Иванов">
+      </div>
+
+      <div class="input">
+        <label for="">Имя</label>
+        <input type="text" placeholder="Иван">
+      </div>
+
+      <div class="input">
+        <label for="">Отчество</label>
+        <input type="text" placeholder="Иванович">
+      </div>
+
+
+
+
     </div>
 
+
+
+
+
+
     <div class="reg-sailor-inputs">
-      <AfInputPassword v-model="formData.companyPassword" title="Укажите пароль" />
-      <AfInputPassword
-        v-model="formData.companyConfirmPassword"
-        title="Подтвердите пароль"
-      />
+      <label class="menu-reg-label">
+        Укажите пароль
+        <div class="password">
+          <input id="reg-pass" type="password" class="menu-reg-input">
+          <a href="#" class="password-control" onclick="return show_hide_password(this);"></a>
+        </div>
+      </label>
+
+      <label class="menu-reg-label">
+        Подтвердите пароль
+        <div class="password">
+          <input id="reg-pass" type="password" class="menu-reg-input">
+          <a href="#" class="password-control" onclick="return show_hide_password(this);"></a>
+        </div>
+      </label>
     </div>
+    <!-- /.reg-sailor-inputs -->
 
     <div class="reg-sailor-end">
       <div class="resume-contact__second">
-        <AfCheckbox v-model="formData.agreement" />
+        <label class="custom-checkbox">
+          <input type="checkbox" checked="">
+          <span class="checkmark"></span>
+          Принимаю <a href="#">условия<br>
+          пользовательского соглашения</a>
+
+        </label>
       </div>
-      <AfGroupBtn @register="handleRegistration()" />
+
+      <div class="reg-sailor-buttons">
+        <button class="reg-sailor-button reg-sailor-blue">
+          Зарегистрироваться
+          <span>→</span>
+        </button>
+        <!-- /.reg-sailor-button -->
+        <button @click="closeModal('company');toggleModal('modalSeilorRegLogin');" class="reg-sailor-button about-button-blue">
+          Войти
+          <span>→</span>
+        </button>
+        <!-- /.reg-sailor-button --></div>
+      <!-- /.reg-sailor-buttons -->
     </div>
+    <!-- /.reg-sailor-end -->
   </div>
+
+ 
   <div
     :class="['header-overlay', { 'header-overlay__active': isOpen }]"
     @click="closeModal('company')"
@@ -108,7 +170,7 @@ import AfCloseModal from "@/components/uikit/AfCloseModal";
 import useVuelidate from "@vuelidate/core";
 import { required, email, minLength } from "@vuelidate/validators";
 import { useModalStore } from "~/store/modal";
-const { closeModal } = useModalStore();
+const { closeModal, toggleModal } = useModalStore();
 const props = defineProps({
   isOpen: {
     type: Boolean,

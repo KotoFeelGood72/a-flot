@@ -219,84 +219,331 @@
               </NuxtLink>
             </div>
 
+            <!-- ED TODO: remove -->
             <div class="vak new-vak">
-              <ul class="vak-list">
+              <ul class="vak-list" id="vakNav1">
                 <li v-for="(item, i) in newsLinks" :key="'news-item-link' + i">
                   <a
-                    :class="{ 'vak-active': activeTabNewsIndex === i }"
-                    @click="activeTabNewsIndex = i"
+                          :class="{ 'vak-active': activeTabNewsIndex === i }"
+                          @click="activeTabNewsIndex = i"
                   >
                     <div class="vak-list-text">{{ item.name }}</div>
                     <div class="vak-list-dop">{{ item.txt }}</div>
                   </a>
                 </li>
               </ul>
-              <HomeNews/>
-              <div style="display:none;" id="vaksWrap1" class="vak-block">
-                <div class="vak-tab" :class="{ 'vak-active': activeTabNewsIndex === 0 }">
-                  <div class="new-block" v-if="main && main[2]">
-                    <Swiper
-                      :slides-per-view="3"
-                      :loop="true"
-                      :space-between="30"
-                      :modules="[Navigation]"
-                      :navigation="{
-                        prevEl: `.new-prev`,
-                        nextEl: `.new-next`,
-                      }"
-                    >
-                      <SwiperSlide
-                        v-for="(item, i) in main[2].new_news"
-                        :key="'item-slide-' + i"
-                      >
-                        <NewSlide :data="item" />
-                      </SwiperSlide>
-                    </Swiper>
+
+
+              <div id="vaksWrap1" class="vak-block">
+                <div class="vak-tab" id="vakk1":class="{ 'vak-active': activeTabNewsIndex === 0 }">
+                  <div class="new-block">
+                    <div class="new-slider swiper">
+                      <div class="new-wrapper swiper-wrapper">
+                        <div class="new-slide swiper-slide">
+                          <a href="/single-post" class="new-item">
+                            <div class="new-top">
+                              <img src="assets/img/new/image.png" alt="image" class="new-img">
+                              <div class="new-top__title">
+                                <div class="new-top__number">
+                                  12
+                                </div>
+                                <!-- /.new-top__number -->
+
+                                <div class="new-top__subtitle">
+                                  декабря 2023
+                                </div>
+                                <!-- /.new-top__subtitle -->
+                              </div>
+                              <!-- /.new-top__title -->
+                            </div>
+                            <!-- /.new-top -->
+
+                            <div class="new-content">
+                              <div class="new-text">
+                                Пример очень длинного заголовка новости, длиною в три строки
+                              </div>
+                              <!-- /.new-text -->
+                            </div>
+                            <!-- /.new-content -->
+                          </a>
+                          <!-- /.new-item -->
+                        </div>
+                        <!-- /.new-slide swiper-slide -->
+
+
+                        <div class="new-slide swiper-slide">
+                          <a href="/single-post" class="new-item">
+                            <div class="new-top">
+                              <img src="assets/img/new/image.png" alt="image" class="new-img">
+                              <div class="new-top__title">
+                                <div class="new-top__number">
+                                  12
+                                </div>
+                                <!-- /.new-top__number -->
+
+                                <div class="new-top__subtitle">
+                                  декабря 2023
+                                </div>
+                                <!-- /.new-top__subtitle -->
+                              </div>
+                              <!-- /.new-top__title -->
+                            </div>
+                            <!-- /.new-top -->
+
+                            <div class="new-content">
+                              <div class="new-text">
+                                Пример очень длинного заголовка новости, длиною в три строки
+                              </div>
+                              <!-- /.new-text -->
+                            </div>
+                            <!-- /.new-content -->
+                          </a>
+                          <!-- /.new-item -->
+                        </div>
+                        <!-- /.new-slide swiper-slide -->
+
+
+                        <div class="new-slide swiper-slide">
+                          <a href="/single-post" class="new-item">
+                            <div class="new-top">
+                              <img src="assets/img/new/image.png" alt="image" class="new-img">
+                              <div class="new-top__title">
+                                <div class="new-top__number">
+                                  12
+                                </div>
+                                <!-- /.new-top__number -->
+
+                                <div class="new-top__subtitle">
+                                  декабря 2023
+                                </div>
+                                <!-- /.new-top__subtitle -->
+                              </div>
+                              <!-- /.new-top__title -->
+                            </div>
+                            <!-- /.new-top -->
+
+                            <div class="new-content">
+                              <div class="new-text">
+                                Пример очень длинного заголовка новости, длиною в три строки
+                              </div>
+                              <!-- /.new-text -->
+                            </div>
+                            <!-- /.new-content -->
+                          </a>
+                          <!-- /.new-item -->
+                        </div>
+                        <!-- /.new-slide swiper-slide -->
+
+
+                        <div class="new-slide swiper-slide">
+                          <a href="/single-post" class="new-item">
+                            <div class="new-top">
+                              <img src="assets/img/new/image.png" alt="image" class="new-img">
+                              <div class="new-top__title">
+                                <div class="new-top__number">
+                                  12
+                                </div>
+                                <!-- /.new-top__number -->
+
+                                <div class="new-top__subtitle">
+                                  декабря 2023
+                                </div>
+                                <!-- /.new-top__subtitle -->
+                              </div>
+                              <!-- /.new-top__title -->
+                            </div>
+                            <!-- /.new-top -->
+
+                            <div class="new-content">
+                              <div class="new-text">
+                                Пример очень длинного заголовка новости, длиною в три строки
+                              </div>
+                              <!-- /.new-text -->
+                            </div>
+                            <!-- /.new-content -->
+                          </a>
+                          <!-- /.new-item -->
+                        </div>
+                        <!-- /.new-slide swiper-slide -->
+                      </div>
+                      <!-- /.new-wrapper new-wrapper -->
+                    </div>
+                    <!-- /.new-slider swiper -->
 
                     <div class="new-dop">
                       <div class="new-prev new-arrow" id="new-prev">←</div>
-                      <NuxtLink to="/news" class="new-link">
+                      <!-- /.new-prev -->
+                      <a href="/news" class="new-link">
                         <span>Все новости</span>
-                        <img src="assets/img/new/new-icon.svg" alt="image" />
-                      </NuxtLink>
+                        <img src="assets/img/new/new-icon.svg" alt="image">
+                      </a>
+                      <!-- /.new-link -->
                       <div class="new-next new-arrow" id="new-next">→</div>
+                      <!-- /.new-next -->
                     </div>
+                    <!-- /.new-dop -->
                   </div>
+                  <!-- /.new-block -->
                 </div>
-              </div>
-              <div style="display:none;" id="vaksWrap2" class="vak-block">
-                <div class="vak-tab" :class="{ 'vak-active': activeTabNewsIndex === 1 }">
-                  <div class="new-block" v-if="main && main[2]">
-                    <Swiper
-                      :slides-per-view="3"
-                      :loop="true"
-                      :space-between="30"
-                      :modules="[Navigation]"
-                      :navigation="{
-                        prevEl: `.new-prev`,
-                        nextEl: `.new-next`,
-                      }"
-                    >
-                      <SwiperSlide
-                        v-for="(item, i) in main[2].interesting"
-                        :key="'item-slide-' + i"
-                      >
-                        <NewSlide :data="item" />
-                      </SwiperSlide>
-                    </Swiper>
+                <!-- /.vak-tab -->
+
+                <div class="vak-tab" id="vakk2" :class="{ 'vak-active': activeTabNewsIndex === 1 }">
+                  <div class="new-block">
+                    <div class="new-slider-1 swiper">
+                      <div class="new-wrapper swiper-wrapper">
+                        <div class="new-slide swiper-slide">
+                          <a href="/single-post" class="new-item">
+                            <div class="new-top">
+                              <img src="assets/img/new/image.png" alt="image" class="new-img">
+                              <div class="new-top__title">
+                                <div class="new-top__number">
+                                  12
+                                </div>
+                                <!-- /.new-top__number -->
+
+                                <div class="new-top__subtitle">
+                                  декабря 2023
+                                </div>
+                                <!-- /.new-top__subtitle -->
+                              </div>
+                              <!-- /.new-top__title -->
+                            </div>
+                            <!-- /.new-top -->
+
+                            <div class="new-content">
+                              <div class="new-text">
+                                Пример очень длинного заголовка новости, длиною в три строки
+                              </div>
+                              <!-- /.new-text -->
+                            </div>
+                            <!-- /.new-content -->
+                          </a>
+                          <!-- /.new-item -->
+                        </div>
+                        <!-- /.new-slide swiper-slide -->
+
+
+                        <div class="new-slide swiper-slide">
+                          <a href="/single-post" class="new-item">
+                            <div class="new-top">
+                              <img src="assets/img/new/image.png" alt="image" class="new-img">
+                              <div class="new-top__title">
+                                <div class="new-top__number">
+                                  12
+                                </div>
+                                <!-- /.new-top__number -->
+
+                                <div class="new-top__subtitle">
+                                  декабря 2023
+                                </div>
+                                <!-- /.new-top__subtitle -->
+                              </div>
+                              <!-- /.new-top__title -->
+                            </div>
+                            <!-- /.new-top -->
+
+                            <div class="new-content">
+                              <div class="new-text">
+                                Пример очень длинного заголовка новости, длиною в три строки
+                              </div>
+                              <!-- /.new-text -->
+                            </div>
+                            <!-- /.new-content -->
+                          </a>
+                          <!-- /.new-item -->
+                        </div>
+                        <!-- /.new-slide swiper-slide -->
+
+
+                        <div class="new-slide swiper-slide">
+                          <a href="/single-post" class="new-item">
+                            <div class="new-top">
+                              <img src="assets/img/new/image.png" alt="image" class="new-img">
+                              <div class="new-top__title">
+                                <div class="new-top__number">
+                                  12
+                                </div>
+                                <!-- /.new-top__number -->
+
+                                <div class="new-top__subtitle">
+                                  декабря 2023
+                                </div>
+                                <!-- /.new-top__subtitle -->
+                              </div>
+                              <!-- /.new-top__title -->
+                            </div>
+                            <!-- /.new-top -->
+
+                            <div class="new-content">
+                              <div class="new-text">
+                                Пример очень длинного заголовка новости, длиною в три строки
+                              </div>
+                              <!-- /.new-text -->
+                            </div>
+                            <!-- /.new-content -->
+                          </a>
+                          <!-- /.new-item -->
+                        </div>
+                        <!-- /.new-slide swiper-slide -->
+
+
+                        <div class="new-slide swiper-slide">
+                          <a href="/single-post" class="new-item">
+                            <div class="new-top">
+                              <img src="assets/img/new/image.png" alt="image" class="new-img">
+                              <div class="new-top__title">
+                                <div class="new-top__number">
+                                  12
+                                </div>
+                                <!-- /.new-top__number -->
+
+                                <div class="new-top__subtitle">
+                                  декабря 2023
+                                </div>
+                                <!-- /.new-top__subtitle -->
+                              </div>
+                              <!-- /.new-top__title -->
+                            </div>
+                            <!-- /.new-top -->
+
+                            <div class="new-content">
+                              <div class="new-text">
+                                Пример очень длинного заголовка новости, длиною в три строки
+                              </div>
+                              <!-- /.new-text -->
+                            </div>
+                            <!-- /.new-content -->
+                          </a>
+                          <!-- /.new-item -->
+                        </div>
+                        <!-- /.new-slide swiper-slide -->
+                      </div>
+                      <!-- /.new-wrapper new-wrapper -->
+                    </div>
+                    <!-- /.new-slider swiper -->
 
                     <div class="new-dop">
-                      <div class="new-prev new-arrow" id="new-prev">←</div>
-                      <NuxtLink to="/news" class="new-link">
+                      <div class="new-prev new-arrow" id="new-prev-1">←</div>
+                      <!-- /.new-prev -->
+                      <a href="/news" class="new-link">
                         <span>Все новости</span>
-                        <img src="assets/img/new/new-icon.svg" alt="image" />
-                      </NuxtLink>
-                      <div class="new-next new-arrow" id="new-next">→</div>
+                        <img src="assets/img/new/new-icon.svg" alt="image">
+                      </a>
+                      <!-- /.new-link -->
+                      <div class="new-next new-arrow" id="new-next-1">→</div>
+                      <!-- /.new-next -->
                     </div>
+                    <!-- /.new-dop -->
                   </div>
+                  <!-- /.new-block -->
                 </div>
+                <!-- /.vak-tab -->
               </div>
+              <!-- /.vak-block -->
+
+
             </div>
+
           </div>
         </div>
       </div>
@@ -316,8 +563,13 @@ import VakItem from "~/components/list/VakItem.vue";
 import ResItem from "~/components/list/ResItem.vue";
 import NewSlide from "~/components/list/NewSlide.vue";
 import api from "@/api/api";
-import { Navigation } from "swiper/modules";
 import { useGlobalStore, useGlobalStoreRefs } from "~/store/useGlobalStore";
+
+// import Swiper bundle with all modules installed
+import Swiper from 'swiper/bundle';
+
+// import styles bundle
+import 'swiper/css/bundle';
 
 //ED TODO: remove on backend release
 import HomeVacancy from "~/components/demo_html/HomeVacancy.vue";
@@ -325,18 +577,6 @@ import HomeResume from "~/components/demo_html/HomeResume.vue";
 import HomeFooter from '../components/demo_html/HomeFooter.vue';
 import HomeNews from '../components/demo_html/HomeNews.vue';
 
-// export default {
-//   data () {
-//     return {
-//       options: {
-//         scrollOverflow: true,
-//         scrollBar: true,
-//         menu: '#menu',
-//         navigation: true,
-//       }
-//     }
-//   },
-// }
 const activeTabIndex = ref(0);
 const activeTabNewsIndex = ref(0);
 const main = ref({});
@@ -360,6 +600,68 @@ async function fetchMain() {
   const { data } = await api.get("/main");
   main.value = data;
 }
+onMounted(() => {
+  let swiper = new Swiper(".new-slider", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    navigation: {
+      nextEl: "#new-next",
+      prevEl: "#new-prev",
+    },
+    breakpoints: {
+      1: {
+        slidesPerView: 1,
+
+      },
+      768: {
+        slidesPerView: 1,
+
+      },
+      769: {
+        slidesPerView: 2,
+      },
+      1240: {
+        slidesPerView: 2,
+      },
+      1241: {
+        slidesPerView: 3,
+      },
+
+    },
+
+  });
+
+  let swiper1 = new Swiper(".new-slider-1", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    navigation: {
+      nextEl: "#new-next-1",
+      prevEl: "#new-prev-1",
+    },
+    breakpoints: {
+      1: {
+        slidesPerView: 1,
+
+      },
+      768: {
+        slidesPerView: 1,
+
+      },
+      769: {
+        slidesPerView: 2,
+      },
+      1240: {
+        slidesPerView: 2,
+      },
+      1241: {
+        slidesPerView: 3,
+      },
+
+    },
+
+  });
+});
+
 
 </script>
 
@@ -383,13 +685,6 @@ body {
   align-items: center;
   transition: transform 1s ease-in-out;
 }
-/*
-.fixed-dop {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-}
-*/
 .section-content-1 {
   display: flex;
   align-items: center;

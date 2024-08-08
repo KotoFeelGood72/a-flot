@@ -4,11 +4,13 @@
         <slot />
 
     </div>
+    <ScrollTop/>
 </template>
 
 <script setup >
 import AfHeaderColor from '~/components/AfHeaderColor.vue';
 
+import ScrollTop from '~/components/ScrollTop.vue';
 
 </script>
 
