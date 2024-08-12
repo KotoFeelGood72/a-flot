@@ -1,8 +1,8 @@
 <script setup>
 import { useModalStoreRefs, useModalStore } from "~/store/modal";
 import { useRoute } from "vue-router";
-import ModalMenu from "../components/global/ModalMenu";
-import ModalLk from "../components/global/ModalLk";
+import ModalMenu from "../components/global/ModalMenu.vue";
+import ModalLk from "../components/global/ModalLk.vue";
 import ModalRegSeilor from "./components/global/ModalRegSeilor.vue";
 import ModalRegCompany from "./components/global/ModalRegCompany.vue";
 import MenuAccountCompany from "./components/global/MenuAccountCompany.vue";

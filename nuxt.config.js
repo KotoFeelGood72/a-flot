@@ -12,7 +12,8 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     '@pinia-plugin-persistedstate/nuxt',
     '@fullpage/nuxt-fullpage',
-    'nuxt-swiper'
+    'nuxt-swiper',
+    //'@nuxt/devtools',
   ],
   plugins: [
     { src: "~/plugins/jquery", mode: "client" },
@@ -59,5 +60,5 @@ export default defineNuxtConfig({
       ],
     }
   },
-  render: { csp: false }
+  render: { csp: false },
 })

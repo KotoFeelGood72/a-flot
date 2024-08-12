@@ -1,5 +1,5 @@
 <template>
-    <NuxtLayout  name="default-hero">
+    <NuxtLayout name="default-hero">
         <div class="section-hero section-hero-dock">
             <AfCustomHeader/>
             <div class="hero hero-dock">

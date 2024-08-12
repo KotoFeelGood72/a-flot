@@ -1,9 +1,9 @@
 <template>
-  <NuxtLayout name="default-hero" class="main cabinet" style="background-color: #fff">
-    <div>
+  <NuxtLayout name="default-hero">
+    <div style="background-color: #fff">
       <AfHeaderColor />
     </div>
-    <section id="resume">
+    <section id="resume" class="main cabinet">
       <div class="container">
         <div class="tabs">
           <div class="tab-header">
@@ -520,6 +520,9 @@
         sr: true,
         sc: false
       }
+    },
+    mounted() {
+      document.body.classList.add('bg-white');
     }
   }
 </script>
